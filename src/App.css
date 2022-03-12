@@ -27,6 +27,8 @@ body {
 }
 
 h1 {
+  width: 100%;
+  margin: auto;
   font-size: 3rem;
   letter-spacing: 0.9px;
   background: linear-gradient(
@@ -40,9 +42,19 @@ h1 {
   width: fit-content;
 }
 
+.header {
+  width: 100%;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #212426;
+}
 .search {
-  width: 71%;
-  margin: 4rem 0 2rem;
+  width: 70%;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 4em;
 
   display: flex;
   align-items: center;
@@ -107,7 +119,8 @@ h1 {
 .container {
   width: 100%;
   margin-top: 3rem;
-
+  top: 0;
+  z-index: -1;
   display: flex;
   justify-content: center;
   align-items: center;

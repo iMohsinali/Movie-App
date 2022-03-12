@@ -20,19 +20,21 @@ const App = () => {
   }, []);
   return (
     <div className="app">
-      <h1>MovieLand</h1>
-      <div className="search">
-        <input
-          placeholder="search for movies"
-          type="text"
-          value={searchTearm}
-          onChange={(e) => setsearchTearm(e.target.value)}
-        />
-        <img
-          src={searchicon}
-          alt="Name"
-          onClick={() => searchmovie(searchTearm)}
-        />
+      <div className="header">
+        <h1>MovieLand</h1>
+        <div className="search">
+          <input
+            placeholder="search for movies"
+            type="text"
+            value={searchTearm}
+            onChange={(e) => setsearchTearm(e.target.value)}
+          />
+          <img
+            src={searchicon}
+            alt="Name"
+            onClick={() => searchmovie(searchTearm)}
+          />
+        </div>
       </div>
       {movies?.length > 0 ? (
         <div className="container">
